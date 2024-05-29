@@ -1,0 +1,17 @@
+spring:
+  security:
+    oauth2:
+      client:
+        provider:
+          azuretoto:
+            issuer-uri: https://login.microsoftonline.com/<tenant id>
+            user-name-attribute: name
+        registration:
+          azure-dev:
+            provider: azuretoto
+            client-id: <application client id>
+            client-secret: <application client secret>      
+            scope:
+            - openid
+            - email
+            - profile
